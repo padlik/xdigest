@@ -43,7 +43,7 @@ SEARCH_PROMPT = (
 )
 
 XAI_API_URL = "https://api.x.ai/v1/responses"
-SEARCH_MODEL = "grok-4.20-0309-non-reasoning"
+SEARCH_MODEL = "grok-4-1-fast"
 FX_API_BASE = "https://api.fxtwitter.com"
 VX_API_BASE = "https://api.vxtwitter.com"
 REQUEST_DELAY = 0.5
