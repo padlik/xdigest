@@ -104,7 +104,7 @@ FXTWITTER_API = "https://api.fxtwitter.com"
 VXTWITTER_API = "https://api.vxtwitter.com"
 
 REQUEST_DELAY = 0.5
-MAX_TWEETS    = 30
+MAX_TWEETS    = 50
 
 SEARCH_TOPICS = [
         # 110: LLM Latest -> Focuses on technical releases and evaluations with links
