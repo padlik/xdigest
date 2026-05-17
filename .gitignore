@@ -219,3 +219,9 @@ __marimo__/
 
 #databases 
 *.db
+
+#DS_Store
+.DS_Store
+
+#Run resutls
+digests/
