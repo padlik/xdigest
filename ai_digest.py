@@ -107,11 +107,11 @@ REQUEST_DELAY = 0.5
 MAX_TWEETS    = 30
 
 SEARCH_TOPICS = [
-    "LLM large language model latest",
-    "MCP model context protocol AI",
-    "AI agent framework 2025",
-    "Claude GPT Gemini new release",
-    "AI research paper breakthrough",
+    "(LLM OR 'large language model') (benchmark OR eval OR architecture OR weights OR 'context window') -is:reply",
+    "('Model Context Protocol' OR 'MCP server' OR 'MCP tool') (github OR protocol OR implementation) min_faves:10",
+    "('AI agent' OR 'agentic workflow') (langgraph OR crewai OR autogen OR 'multi-agent') min_faves:10",
+    "(Claude OR GPT OR Gemini OR DeepSeek OR Qwen OR Grok OR Kimi or Glm) (release OR 'now available' OR architecture OR capability) -is:reply",
+    "(arXiv OR 'research paper' OR 'paper breakdown') (AI OR ML OR LLM) min_retweets:5",
 ]
 
 # ── LLM presets ───────────────────────────────────────────────────────────────
