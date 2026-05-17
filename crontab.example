@@ -1,0 +1,3 @@
+# Run twice a day, index everything
+0  8 * * * cd ~/ai-digest && uv run ai_digest.py --format md --db ai_digest.db -o "digests/$(date +%F)-am.md"
+0 20 * * * cd ~/ai-digest && uv run ai_digest.py --format md --db ai_digest.db -o "digests/$(date +%F)-pm.md"
