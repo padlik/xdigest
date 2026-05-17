@@ -107,11 +107,20 @@ REQUEST_DELAY = 0.5
 MAX_TWEETS    = 30
 
 SEARCH_TOPICS = [
-    "(LLM OR 'large language model') (benchmark OR eval OR architecture OR weights OR 'context window') -is:reply",
-    "('Model Context Protocol' OR 'MCP server' OR 'MCP tool') (github OR protocol OR implementation) min_faves:10",
-    "('AI agent' OR 'agentic workflow') (langgraph OR crewai OR autogen OR 'multi-agent') min_faves:10",
-    "(Claude OR GPT OR Gemini OR DeepSeek OR Qwen OR Grok OR Kimi or Glm) (release OR 'now available' OR architecture OR capability) -is:reply",
-    "(arXiv OR 'research paper' OR 'paper breakdown') (AI OR ML OR LLM) min_retweets:5",
+        # 110: LLM Latest -> Focuses on technical releases and evaluations with links
+    "(LLM OR 'large language model') (weights OR benchmark OR 'context window' OR fine-tune) filter:links -is:reply min_faves:15",
+
+    # 111: MCP -> Focuses on newly shipped open-source servers and tools
+    "('Model Context Protocol' OR 'MCP server' OR 'MCP tool') (github OR open-source OR shipped) filter:links",
+
+    # 112: AI Agent Framework -> Focuses on production code, architecture breakdowns, and GitHub repos
+    "('AI agent' OR 'agentic') (langgraph OR crewai OR autogen OR production) filter:links min_faves:10 -is:reply",
+
+    # 113: Claude/GPT/Gemini -> Filters out tech-bro hype; targets actual documentation and launch posts
+    "(Claude OR 'GPT-5' OR Gemini OR DeepSeek or Kimi or Qwen) (release OR API OR documentation OR 'now available') filter:links min_faves:20 -is:reply",
+
+    # 114: Research Papers -> Targets deep-dives and paper summaries with direct arXiv links
+    "(arXiv OR 'research paper') (AI OR LLM OR 'deep learning') (breakdown OR thread OR summary) filter:links min_faves:25"
 ]
 
 # ── LLM presets ───────────────────────────────────────────────────────────────
