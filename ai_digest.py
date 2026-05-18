@@ -109,18 +109,11 @@ MAX_TWEETS    = 50
 SEARCH_TOPICS = [
         # 110: LLM Latest -> Focuses on technical releases and evaluations with links
     "(LLM OR 'large language model') (weights OR benchmark OR 'context window' OR fine-tune) filter:links -is:reply min_faves:15",
-
-    # 111: MCP -> Focuses on newly shipped open-source servers and tools
     "('Model Context Protocol' OR 'MCP server' OR 'MCP tool') (github OR open-source OR shipped) filter:links",
-
-    # 112: AI Agent Framework -> Focuses on production code, architecture breakdowns, and GitHub repos
     "('AI agent' OR 'agentic') (langgraph OR crewai OR autogen OR production) filter:links min_faves:10 -is:reply",
-
-    # 113: Claude/GPT/Gemini -> Filters out tech-bro hype; targets actual documentation and launch posts
     "(Claude OR 'GPT-5' OR Gemini OR DeepSeek or Kimi or Qwen) (release OR API OR documentation OR 'now available') filter:links min_faves:20 -is:reply",
-
-    # 114: Research Papers -> Targets deep-dives and paper summaries with direct arXiv links
-    "(arXiv OR 'research paper') (AI OR LLM OR 'deep learning') (breakdown OR thread OR summary) filter:links min_faves:25"
+    "(arXiv OR 'research paper') (AI OR LLM OR 'deep learning') (breakdown OR thread OR summary) filter:links min_faves:25",
+    "\"MCP server\" repository min_faves:25"
 ]
 
 # ── LLM presets ───────────────────────────────────────────────────────────────
