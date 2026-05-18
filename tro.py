@@ -31,7 +31,8 @@ QUERIES = [
         "(arxiv OR benchmark OR SOTA) (LLM OR reasoning OR multimodal) min_faves:25",
         "(open-source OR weights) model release min_faves:20",
         "(\"tool calling\" OR MCP OR function calling) agents min_faves:10",
-        "(coding agent OR SWE-agent OR autonomous coding) min_faves:15"
+        "(coding agent OR SWE-agent OR autonomous coding) min_faves:15",
+        "\"MCP server\" repository min_faves:25"
 ]
 
 SEARCH_PROMPT = (
